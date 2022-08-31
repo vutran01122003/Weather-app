@@ -49,7 +49,7 @@ function changWeatherUI(searchValue) {
                 }
 
             } else {
-                alert('Tên Thành Phố Chưa Được Cập Nhật');
+                alert('The Name Of This City Has Not Been Updated Yet');
             }
         }) 
 }
