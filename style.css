@@ -1,0 +1,109 @@
+:root {
+    --white-high-opacity: rgba(255, 255, 255, 0.4);
+    --black-high-opacity: rgba(0, 0 ,0 ,0.5);
+    --black-low-opacity: rgba(0, 0, 0, 0.7);
+    --white-low-opacity: rgba(255, 255, 255, 0.7);
+    --text-color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-shadow: 1px 1px #000;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to top, var(--black-low-opacity), var(--black-high-opacity)), url('./images/cold.jpg') no-repeat center /cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#weather__app {
+    min-width: 350px;
+    background: url('./images/cold.jpg') no-repeat center /cover;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--white-low-opacity);
+    border: 2px solid var(--black-low-opacity);
+}
+
+.search {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 15px 0 15px;
+    background: var(--white-high-opacity);
+    transition: all 0.4s linear;
+    font-size: 19px;
+    box-shadow: 0 3px 5px var(--black-high-opacity);
+}
+
+.search::placeholder {
+    color: var(--black-high-opacity)
+}
+
+.search:focus {
+    border-radius: 15px 0 15px 0;
+    background: var(--white-low-opacity);
+}
+
+.content {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--text-color);
+    transition: all 0.4s linear;
+}
+
+.capital {
+    text-shadow: 2px 2px var(--black-high-opacity);
+}
+
+.time {
+    margin: 15px 0 20px 0;
+    font-size: 15px;
+}
+
+.temperature {
+    display: inline-block;
+    font-size: 65px;
+    margin: 20px 0 30px 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--white-high-opacity);
+    box-shadow: 5px 5px 2px var(--black-low-opacity);
+    border-radius: 15px;
+    font-weight: 800;
+    text-shadow: 2px 2px var(--black-low-opacity);
+}
+
+.short__desc {
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 3px 3px var(--black-high-opacity);
+}
+
+.more__desc {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.more__desc-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.more__desc .more__desc-item i {
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
